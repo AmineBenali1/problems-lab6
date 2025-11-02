@@ -1,0 +1,26 @@
+(results of one output)
+
+1. Random insert/delete
+
+ArrayList: 105 ms (faster)
+LinkedList: 984 ms (slower)
+Reason:
+ArrayList shifts elements in memory but random insertions/deletions are rare here and the array is contiguous -> faster for moderate sizes.
+LinkedList must traverse the list to reach a random position -> O(n) -> much slower.
+
+2. Sequential insert/delete at start/end
+
+ArrayList: 222 ms (slower)
+LinkedList: 3.5 ms (faster)
+Reason:
+ArrayList: inserting/removing at start requires shifting all elements -> O(n).
+LinkedList: addFirst(), addLast(), removeFirst(), removeLast() : O(1) -> very fast.
+
+3. Random access (get)
+
+ArrayList: 18.6 ms (fast)
+LinkedList: 489 ms (slow)
+
+Reason:
+ArrayList: direct index access in an array -> O(1).
+LinkedList: must traverse nodes one by one -> O(n) -> much slower
