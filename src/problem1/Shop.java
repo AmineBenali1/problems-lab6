@@ -6,7 +6,7 @@ public class Shop
 {
     public static void main (String[] args)
     {
-        ArrayList<Item> cart = new ArrayList();
+        ArrayList<Item> cart = new ArrayList<>();
         String itemName;
         double itemPrice;
         int quantity;
